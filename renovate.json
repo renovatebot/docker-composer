@@ -1,5 +1,11 @@
 {
-  "extends": ["config:base", ":rebaseStalePrs", ":masterIssue"],
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":masterIssue",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)"
+  ],
   "pinDigests": true,
   "packageRules": [
     {
@@ -10,9 +16,10 @@
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["ENV COMPOSER_VERSION=(?<currentValue>.*?)\n"],
-      "depNameTemplate": "composer/composer",
-      "datasourceTemplate": "github-releases"
+      "matchStrings": [
+        "# renovate: (?<datasource>.*?)/(?<depName>.*?)(\\&versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
   ]
 }
