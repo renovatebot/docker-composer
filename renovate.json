@@ -1,6 +1,18 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base", ":rebaseStalePrs", ":masterIssue"],
+  "pinDigests": true,
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "masterIssueApproval": true
+    }
   ],
-  "pinDigests": true
+  "regexManagers": [
+    {
+      "matchStrings": [
+        "ENV .*?_VERSION=(?<currentValue>.*) # (?<datasource>.*?)/(?<depName>.*?)(\\&versioning=(?<versioning>.*?))?\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
+    }
+  ]
 }
