@@ -8,7 +8,7 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
     apt-get -y install php7.4-cli php7.4-mbstring && \
     rm -rf /var/lib/apt/lists/*
 
-ENV COMPOSER_VERSION=1.9.3
+ENV COMPOSER_VERSION=1.10.1
 
 RUN php -r "copy('https://github.com/composer/composer/releases/download/$COMPOSER_VERSION/composer.phar', '/usr/local/bin/composer');"
 
