@@ -2,9 +2,11 @@ FROM renovate/base@sha256:db3e68b80043f9cb6227eb46053e2475a318b26bebbdfaecef6901
 
 USER root
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update && apt-get install -y php-cli php-mbstring git unzip && apt-get clean
+RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt/sources.list.d/ondrej-php.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 14AA40EC0831756756D7F66C4F4EA0AAE5267A6C && \
+    apt-get update && \
+    apt-get -y install php7.4-cli php7.4-mbstring && \
+    rm -rf /var/lib/apt/lists/*
 
 ENV COMPOSER_VERSION=1.9.3
 
@@ -14,4 +16,4 @@ RUN chmod +x /usr/local/bin/composer
 
 RUN ls -l /usr/local/bin
 
-USER ubuntu
+USER 1000
