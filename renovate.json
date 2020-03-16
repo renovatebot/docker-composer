@@ -1,6 +1,18 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base", ":rebaseStalePrs", ":masterIssue"],
+  "pinDigests": true,
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "masterIssueApproval": true
+    }
   ],
-  "pinDigests": true
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ENV COMPOSER_VERSION=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "composer/composer",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
 }
