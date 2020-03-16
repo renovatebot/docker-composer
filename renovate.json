@@ -1,5 +1,11 @@
 {
-  "extends": ["config:base", ":rebaseStalePrs", ":masterIssue"],
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":masterIssue",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)"
+  ],
   "pinDigests": true,
   "packageRules": [
     {
@@ -10,7 +16,9 @@
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["# (?<datasource>.*?)/(?<depName>.*?)(\\&versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"],
+      "matchStrings": [
+        "# renovate: (?<datasource>.*?)/(?<depName>.*?)(\\&versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+      ],
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
   ]

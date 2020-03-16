@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y php-cli php-mbstring git unzip && apt-get clean
 
-# github-releases/composer/composer
+# renovate: github-releases/composer/composer
 ENV COMPOSER_VERSION=1.9.3
 
 RUN php -r "copy('https://github.com/composer/composer/releases/download/$COMPOSER_VERSION/composer.phar', '/usr/local/bin/composer');"
