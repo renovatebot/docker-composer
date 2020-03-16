@@ -8,8 +8,6 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
     apt-get -y install php7.4-cli php7.4-mbstring && \
     rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y php-cli php-mbstring git unzip && apt-get clean
-
 # renovate: github-releases/composer/composer
 ENV COMPOSER_VERSION=1.10.1
 
