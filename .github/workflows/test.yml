@@ -33,7 +33,7 @@ jobs:
         run: |
           docker buildx build \
             --load \
-            --tag ${DOCKER_REPO}
+            --tag ${DOCKER_REPO} \
             .
 
       - name: Test the Docker images
