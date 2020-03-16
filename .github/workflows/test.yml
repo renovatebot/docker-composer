@@ -1,12 +1,6 @@
 name: Test CI
 
-on:
-  push:
-    branches:
-      - master
-      - 'renovate/**'
-
-  pull_request:
+on: [push, pull_request]
 
 env:
   PLATFORM: linux/amd64
