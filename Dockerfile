@@ -11,10 +11,8 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
 # renovate: datasource=github-releases depName=composer/composer
 ENV COMPOSER_VERSION=1.10.1
 
-RUN php -r "copy('https://github.com/composer/composer/releases/download/$COMPOSER_VERSION/composer.phar', '/usr/local/bin/composer');"
+RUN curl https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer | php -- --version=$COMPOSER_VERSION --install-dir=/usr/local/bin --filename=composer
 
-RUN chmod +x /usr/local/bin/composer
-
-RUN ls -l /usr/local/bin
+RUN composer --version
 
 USER 1000
