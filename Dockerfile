@@ -9,7 +9,7 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt
     rm -rf /var/lib/apt/lists/*
 
 # renovate: datasource=github-releases depName=composer/composer
-ENV COMPOSER_VERSION=1.10.1
+ENV COMPOSER_VERSION=1.10.4
 
 RUN curl https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer | php -- --version=$COMPOSER_VERSION --install-dir=/usr/local/bin --filename=composer
 
