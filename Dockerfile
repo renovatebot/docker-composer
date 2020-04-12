@@ -3,6 +3,6 @@ FROM renovate/buildpack@sha256:9791914dbbfa58d163dbe36d304ec92462a2816f042d73ecb
 # renovate: datasource=github-releases depName=composer/composer
 ENV COMPOSER_VERSION=1.10.4
 
-RUN /usr/local/bin/build/composer.sh
+RUN /usr/local/build/composer.sh
 
 USER 1000
