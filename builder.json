@@ -1,0 +1,5 @@
+{
+  "image": "composer",
+  "startVersion": "1.10.5",
+  "cache": "docker-build-cache"
+}
