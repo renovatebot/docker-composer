@@ -1,8 +1,10 @@
-FROM renovate/buildpack@sha256:1b937dcd416efb84b7be53b050d883bcfdf2f925ab81fd38211f0d75cb235186
+FROM renovate/buildpack
+
+ARG PHP_VERSION=7.4
+RUN install-tool php
 
 # renovate: datasource=github-releases depName=composer/composer
-ENV COMPOSER_VERSION=1.10.5
-
-RUN /usr/local/build/composer.sh
+ARG COMPOSER_VERSION=1.10.5
+RUN install-tool composer
 
 USER 1000
