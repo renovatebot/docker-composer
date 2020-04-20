@@ -7,4 +7,7 @@ RUN install-tool php
 ARG COMPOSER_VERSION=1.10.5
 RUN install-tool composer
 
+LABEL org.opencontainers.image.source="https://github.com/renovatebot/docker-composer" \
+      org.opencontainers.image.version="${COMPOSER_VERSION}"
+
 USER 1000
