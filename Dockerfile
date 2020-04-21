@@ -1,4 +1,4 @@
-FROM renovate/buildpack@sha256:7e28ef186596dc293af15d6c63febf1e424c3e832702864944b498b3050cac52
+FROM renovate/buildpack@sha256:2a94923b7bb1956f5faf1c82b4578436774e13786ce4f693a713b63185e88af2
 
 ARG PHP_VERSION=7.4
 RUN install-tool php
