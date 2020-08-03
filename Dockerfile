@@ -1,5 +1,5 @@
 # renovate: datasource=github-releases depName=composer/composer
-ARG COMPOSER_VERSION=1.10.9
+ARG COMPOSER_VERSION=1.10.10
 
 FROM renovate/buildpack:2-php@sha256:ad37ba8bebece9d6e91032f2b6ffdfa14e6a2bb82c7f74e7b3931d183b09ffb1
 
