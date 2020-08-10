@@ -1,5 +1,6 @@
 {
   "image": "composer",
   "startVersion": "1.10.5",
+  "forceUnstable": true,
   "cache": "docker-build-cache"
 }
