@@ -1,7 +1,7 @@
 # renovate: datasource=github-releases depName=composer/composer
 ARG COMPOSER_VERSION=1.10.13
 
-FROM renovate/buildpack:2-php@sha256:c072bf7ed598285a0451d0a58ed2805171bfc1e4fcaa730246288ccaf3ea03ec
+FROM renovate/buildpack:2-php@sha256:2cc66d90e7299b654e36676edb0dd28aeee4f7967362b270a27695f1cdd164c7
 
 # renovate: datasource=docker depName=php versioning=docker
 ARG PHP_VERSION=7.4
