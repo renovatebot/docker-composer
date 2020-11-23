@@ -39,7 +39,7 @@ jobs:
       - name: Build and Publish
         uses: renovatebot/internal-tools@v1.2.3
         with:
-          command: "docker-builder"
+          command: docker-builder
           build-args: FLAVOR
           tag-suffix: ${{ env.FLAVOR_TAG }}
           dry-run: ${{ env.DRY_RUN }}
