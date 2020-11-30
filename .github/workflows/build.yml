@@ -37,7 +37,7 @@ jobs:
           echo "FLAVOR=${FLAVOR/-latest/}" >> $GITHUB_ENV
 
       - name: Build and Publish
-        uses: renovatebot/internal-tools@v1.2.3
+        uses: renovatebot/internal-tools@v1.2.5
         with:
           command: docker-builder
           build-args: FLAVOR
