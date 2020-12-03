@@ -8,7 +8,7 @@ ARG FLAVOR=
 #--------------------------------------
 
 # renovate: datasource=github-releases depName=composer/composer
-ARG COMPOSER_VERSION=2.0.7
+ARG COMPOSER_VERSION=2.0.8
 
 FROM renovate/buildpack:2-php@sha256:2d4557e5d1271fb0b245df9fadc4e82c66c443e87acd29397ad0315f36fdc20a
 
