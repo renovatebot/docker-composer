@@ -10,9 +10,9 @@ ARG FLAVOR=latest
 # renovate: datasource=github-releases depName=composer/composer
 ARG COMPOSER_VERSION=2.0.9
 
-FROM renovate/buildpack:2-php@sha256:cf330bdd3c434868af4d8c82f48a6a6a406e798fbfbb2112dea233093353e0e6 as base-latest
-FROM renovate/buildpack:2-php-bionic@sha256:7c93a374facfd71496c96cf40b8f855c9f8447ff1a89515585369c7fe10ce8d1 as base-bionic
-FROM renovate/buildpack:2-php-focal@sha256:15e9a4086efb3a688187a748e7f61ffa3e514c2b0341efa7d602a4852048815a as base-focal
+FROM renovate/buildpack:3-php@sha256:e95a46f112917d853a99acfb33a82583fa90f8a1af0cf727992ee7c91c40ddff as base-latest
+FROM renovate/buildpack:3-php-bionic@sha256:8fcb93ca9080805e842bd9b714567846e6f5cc3914410810b7df7a7bf8f49431 as base-bionic
+FROM renovate/buildpack:3-php-focal@sha256:9d68a9d9168391a08a9bc49869e6cdffdc2766b63f73b5b60b6c13735db6c916 as base-focal
 
 #--------------------------------------
 # Image: final
