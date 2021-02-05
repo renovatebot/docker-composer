@@ -1,3 +1,3 @@
 # renovate rebuild trigger
 
-FROM amd64/composer:1.10.20@sha256:1d58b2dc85a65e3814b6bdf7a0bd14c8b4c9a8a5b5e1d1165b9ede6d388a1896
+FROM amd64/composer:1.10.20@sha256:523a59ac1b133631655af373e54c9241c8b3c87f4097f24f56063cac86b9a40d
