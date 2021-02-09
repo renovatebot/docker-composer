@@ -1,11 +1,16 @@
-FROM renovate/buildpack:4-php@sha256:68793ed2873b825c79739436510d8c69fe0eb764c25e7059bd75f7167e2f3a02
 
 # renovate: datasource=docker depName=php versioning=docker
 ARG PHP_VERSION=7.4
-RUN install-tool php
 
 # renovate: datasource=github-releases depName=composer/composer
 ARG COMPOSER_VERSION=2.0.9
+
+FROM renovate/buildpack:4-php@sha256:68793ed2873b825c79739436510d8c69fe0eb764c25e7059bd75f7167e2f3a02
+
+ARG PHP_VERSION
+RUN install-tool php
+
+ARG COMPOSER_VERSION
 RUN install-tool composer
 
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/docker-composer" \
