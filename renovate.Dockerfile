@@ -1,3 +1,10 @@
 # renovate rebuild trigger
 
-FROM amd64/composer:1.10.20@sha256:523a59ac1b133631655af373e54c9241c8b3c87f4097f24f56063cac86b9a40d
+FROM scratch
+
+# renovate: datasource=github-releases depName=composer/composer
+ARG COMPOSER_VERSION=2.0.9
+
+
+# renovate: datasource=github-releases depName=composer/composer
+ARG COMPOSER_VERSION=1.10.20
