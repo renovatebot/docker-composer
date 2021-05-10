@@ -1,6 +1,6 @@
 
 # renovate: datasource=github-releases depName=containerbase/php-prebuild
-ARG PHP_VERSION=7.4.18
+ARG PHP_VERSION=7.4.19
 
 # renovate: datasource=github-releases depName=composer/composer
 ARG COMPOSER_VERSION=2.0.13
