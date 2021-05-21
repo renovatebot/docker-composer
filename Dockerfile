@@ -3,7 +3,7 @@
 ARG PHP_VERSION=7.4.19
 
 # renovate: datasource=github-releases depName=composer/composer
-ARG COMPOSER_VERSION=2.0.13
+ARG COMPOSER_VERSION=2.0.14
 
 FROM renovate/buildpack:5-php@sha256:be47088f97fd12f4814d4a4142683cd9a5e6dc80aafb994a65914446f72a4437
 
