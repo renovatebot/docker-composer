@@ -3,7 +3,7 @@
 FROM scratch
 
 # renovate: datasource=github-releases depName=composer/composer
-ARG COMPOSER_VERSION=2.0.13
+ARG COMPOSER_VERSION=2.0.14
 
 
 # renovate: datasource=github-releases depName=composer/composer
