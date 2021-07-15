@@ -5,7 +5,7 @@ ARG PHP_VERSION=7.4.21
 # renovate: datasource=github-releases depName=composer/composer
 ARG COMPOSER_VERSION=2.1.3
 
-FROM renovate/buildpack:5-php@sha256:5a393d1aefd62116228d510d0c1e7a12a730f3ba77084c754d23de7fa1cefa93
+FROM renovate/buildpack:5-php@sha256:00e129ffaddafe6952686b2823a8378ff24df5dca4ecd7678792b7e6ef451c11
 
 ARG PHP_VERSION
 RUN install-tool php
