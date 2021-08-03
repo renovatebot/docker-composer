@@ -5,3 +5,8 @@
 # docker-composer
 
 This repository is the source for the Docker Hub image `renovate/composer`. Commits to `main` branch are automatically built and published.
+
+
+## Deprecation notice
+
+This repo will be archived soon when official renovate app is using [`v25.65.0`](https://github.com/renovatebot/renovate/releases/tag/25.65.0).
